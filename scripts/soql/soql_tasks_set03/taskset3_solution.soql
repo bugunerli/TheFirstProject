@@ -1,0 +1,18 @@
+//Task Set SOQL 3
+//## Task 10: 
+// Write a SOQL query to retrieve the count of Case records 
+// where the Priority is High'.
+
+//SELECT  COUNT(Id)
+//FROM Case 
+//WHERE Priority = 'High'
+
+
+//## Task 11: 
+// Write a SOQL query to 
+// retrieve the Type and the count of Account records 
+// for each Type HAVING the count of records is greater than 5.
+SELECT Type, COUNT(Id) 
+FROM Account
+GROUP BY Type
+HAVING COUNT(Id) > 5 

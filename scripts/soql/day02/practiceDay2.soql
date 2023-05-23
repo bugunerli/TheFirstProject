@@ -1,0 +1,61 @@
+// PARTIAL CONDITION, FUZZY SEARCH
+
+// RELATIONAL OPERATOR > >= < <= != IN NOT IN
+
+// LIKE % (WILD CARD, it can represent 0 or more characters)
+// Get all Contacts First Name and LastName
+// if FirstName starts with letter A
+
+//SELECT FirstName, LastName
+ //FROM Contact
+ //WHERE FirstName LIKE 'A%'
+
+// Get all contacts FirstName and LastName
+// if FirstName end with letter A
+// We can use LIKE '%A'
+// it matches Alba, Joshua, BA, PA, 12312A
+
+//SELECT FirstName, LastName
+  //FROM Contact
+  //WHERE FirstName LIKE '%A'
+
+// LIKE  % (WILD CARD, it can represent 0 or more characters )
+// Get all contacts First Name and LastName 
+// if FirstName starts with letter JO  
+
+//SELECT FirstName, LastName
+//FROM Contact
+//WHERE FirstName LIKE 'JO%'
+
+// Get all contacts First Name and LastName 
+// if FirstName contains letter A  
+// We can use LIKE '%A%'  
+// it matches  Alba, Game, Apex, Battery, Alberta
+//SELECT FirstName, LastName
+ //FROM Contact
+ //WHERE FirstName LIKE '%A%'
+
+// Get all contacts First Name and LastName 
+// if FirstName starts with A, and Ends with Y
+// We can use LIKE 'A%Y'  
+// it matches  Andy, Albany, Ashley, Ay, Amy, Audrey
+//SELECT FirstName, LastName
+ //FROM Contact
+ //WHERE FirstName LIKE 'A%Y'
+
+// LIKE _(underscore can represent exactly 1 character of any kin)
+// Get all contacts First Name and LastName 
+// if FirstName starts with A, and Ends with Y
+// AND has exactly 4 characters (meaning there are 2 characters in between A and Y)
+
+// We can use LIKE 'A__Y'  
+// it matches  Andy, Anny, Abcy, APZy, A12y, aXY
+//SELECT FirstName, LastName
+ //FROM Contact
+ //WHERE FirstName LIKE 'A__Y'
+
+// Get all contacts that created today
+SELECT FirstName, LastName
+ FROM Contact
+ WHERE CreatedDate = 2023-03-23
+

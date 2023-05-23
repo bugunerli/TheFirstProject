@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Data Binding 2" icon-name="utility:customer">
+    <div class="slds-var-m-around_medium">
+      <!-- add an p tag to show a property called message -->
+      <p>Message : {message}</p>
+      <!-- add a input tag with label message -->
+      <lightning-input
+        type="text"
+        label="My Message"
+        onchange={handleChange}
+      ></lightning-input>
+    </div>
+  </lightning-card>
+</template>
+
+<!-- git config --global user.name "bugunerli"
+git config --global user.email "gunerlibulent@gmail.com" -->
